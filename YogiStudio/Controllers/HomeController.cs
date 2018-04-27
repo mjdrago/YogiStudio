@@ -26,5 +26,17 @@ namespace YogiStudio.Controllers
 
             return View();
         }
+        public ActionResult Instructors()
+        {
+            return View();
+        }
+        public ActionResult CourseCalendar()
+        {
+            return View();
+        }
+        public ActionResult PackagesAndPricing()
+        {
+            return View();
+        }
     }
 }

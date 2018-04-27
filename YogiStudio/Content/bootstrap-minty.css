@@ -82,6 +82,18 @@ body {
   background-attachment:fixed;
   background-size:cover;
 }
+#quote{
+    font-size:22px;
+}
+#mainHeader{
+    text-align:center;
+    font-size:30px;
+    color: #888;
+
+}
+#paragraph{
+
+}
 #homePage {
 }
 #contactUs{
