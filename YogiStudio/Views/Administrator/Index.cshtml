@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <div class="jumbotron">
+        <h1>Yogi Studio</h1>
+        <hr />
+        <h3 id="quote">Be in harmony with yourself</h3>
+        <p class="lead"></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>@Html.ActionLink("Course Calendar", "CRUDCalendar", "Administrator", null, new { @class = "btn btn-primary btn-large btn-block" })</h2>
+  
+        </div>
+        <div class="col-md-6">
+            <h2>@Html.ActionLink("Packages and Pricing", "CRUDPackagesAndPricing", "Administrator", null, new { @class = "btn btn-primary btn-large btn-block" })</h2>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>@Html.ActionLink("Update Employees", "CRUDEmployees", "Administrator", null, new { @class = "btn btn-primary btn-large btn-block" })</h2>
+            </div>
+            <div class="col-md-6">
+                <h2>@Html.ActionLink("Payroll", "PayEmployees", "Administrator", null, new { @class = "btn btn-primary btn-large btn-block" })</h2>
+            </div>
+        </div>
+    </div>
+
+

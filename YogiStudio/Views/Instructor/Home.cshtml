@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<div>
+    <div class="jumbotron">
+        <h1>Yogi Studio</h1>
+        <hr />
+        <h3 id="quote">Be in harmony with yourself</h3>
+        <p class="lead"></p>
+        <p><a> @Html.ActionLink("Learn more", "About", "Home", null, new { @class = "btn btn-primary btn-lg" }) </a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("Yogi Instructor Chat", "InstructorBulletin", "Instructor", null, new { @class = "btn btn-primary btn-large btn-block" })</h2>
+            <p>
+
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("My Work Calendar", "Calendar", "Instructor", null, new { @class = "btn btn-primary btn-large btn-block" })</h2>
+            <p></p>
+        </div>
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("My Pay", "MyPay", "Instructor", null, new { @class = "btn btn-primary btn-large btn-block" })</h2>
+            <p></p>
+        </div>
+    </div>
+</div>

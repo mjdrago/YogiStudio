@@ -196,9 +196,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PackageController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -300,9 +303,19 @@
     <Content Include="Views\Home\Instructors.cshtml" />
     <Content Include="Views\Home\CourseCalendar.cshtml" />
     <Content Include="Views\Home\PackagesAndPricing.cshtml" />
+    <Content Include="Views\Instructor\Home.cshtml" />
+    <Content Include="Views\Instructor\MyPay.cshtml" />
+    <Content Include="Views\Instructor\Calendar.cshtml" />
+    <Content Include="Views\Instructor\InstructorBulletin.cshtml" />
+    <Content Include="Views\Administrator\CRUDEmployees.cshtml" />
+    <Content Include="Views\Administrator\PayEmployees.cshtml" />
+    <Content Include="Views\Administrator\Index.cshtml" />
+    <Content Include="Views\Administrator\CRUDCalendar.cshtml" />
+    <Content Include="Views\Administrator\CRUDPackagesAndPricing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Package\" />
     <Folder Include="Views\Payment\" />
   </ItemGroup>
   <ItemGroup>
