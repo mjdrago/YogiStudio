@@ -155,6 +155,8 @@ namespace YogiStudio.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var resultRoleAdd = await UserManager.AddToRoleAsync(user.Id, "Customer");
+
                     var db = new ApplicationDbContext();
                     var userAccount = new Customer { FirstName = model.FirstName, LastName = model.LastName, DateOfBirth = model.DateOfBirth, ApplicationUserId = user.Id };
                     db.Customers.Add(userAccount);
