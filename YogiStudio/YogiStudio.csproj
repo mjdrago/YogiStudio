@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201804281607008_PackageTableCreated.Designer.cs">
       <DependentUpon>201804281607008_PackageTableCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805012331319_CreatePaymentAndPackageTables.cs" />
+    <Compile Include="Migrations\201805012331319_CreatePaymentAndPackageTables.Designer.cs">
+      <DependentUpon>201805012331319_CreatePaymentAndPackageTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -347,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804281607008_PackageTableCreated.resx">
       <DependentUpon>201804281607008_PackageTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805012331319_CreatePaymentAndPackageTables.resx">
+      <DependentUpon>201805012331319_CreatePaymentAndPackageTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
