@@ -15,9 +15,33 @@ namespace YogiStudio.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Customers
-        public ActionResult Index()
+        public ActionResult Home()
         {
             return View(db.Customers.ToList());
+        }
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
+        public ActionResult CourseCalendar()
+        {
+            return View();
+        }
+        public ActionResult Instructors()
+        {
+            return View();
+        }
+        public ActionResult PackagesAndPricing()
+        {
+            return View();
         }
 
         // GET: Customers/Details/5

@@ -13,6 +13,23 @@ namespace YogiStudio.Controllers
         {
             return View();
         }
+        public ActionResult CRUDCalendar()
+        {
+            return View();
+        }
+        public ActionResult CRUDEmployee()
+        {
+            return View();
+        }
+        public ActionResult CRUDPackagesAndPricing()
+        {
+            return View();
+        }
+        public ActionResult PayEmployees()
+        {
+            return View();
+        }
+
 
         // GET: Administrator/Details/5
         public ActionResult Details(int id)

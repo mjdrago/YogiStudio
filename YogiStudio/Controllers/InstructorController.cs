@@ -13,6 +13,18 @@ namespace YogiStudio.Controllers
         {
             return View();
         }
+        public ActionResult Calendar()
+        {
+            return View();
+        }
+        public ActionResult InstructorBulletin()
+        {
+            return View();
+        }
+        public ActionResult MyPay()
+        {
+            return View();
+        }
 
         // GET: Instructor/Details/5
         public ActionResult Details(int id)
