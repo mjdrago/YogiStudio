@@ -83,8 +83,23 @@ body {
   background-size:cover;
 }
 #quote{
-    font-size:22px;
+    font-size:28px;
+    font-family:'AR BERKLEY';
 }
+.homeButton{
+    text-align:center;
+}
+#navbarLinks{
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+}
+#jumbotron{
+    font-size:56px;
+    font-weight:bold;
+}
+
+
 #mainHeader{
     text-align:center;
     font-size:30px;
@@ -4254,6 +4269,7 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -4287,6 +4303,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+
 }
 
 .navbar-collapse {

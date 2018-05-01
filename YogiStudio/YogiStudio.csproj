@@ -312,6 +312,12 @@
     <Content Include="Views\Administrator\Index.cshtml" />
     <Content Include="Views\Administrator\CRUDCalendar.cshtml" />
     <Content Include="Views\Administrator\CRUDPackagesAndPricing.cshtml" />
+    <Content Include="Views\Customers\About.cshtml" />
+    <Content Include="Views\Customers\Contact.cshtml" />
+    <Content Include="Views\Customers\Instructors.cshtml" />
+    <Content Include="Views\Customers\PackagesAndPricing.cshtml" />
+    <Content Include="Views\Customers\CourseCalendar.cshtml" />
+    <Content Include="Views\Customers\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
