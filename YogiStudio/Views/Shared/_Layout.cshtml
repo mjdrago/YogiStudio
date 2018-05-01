@@ -21,6 +21,26 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @*@if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        var roles = Roles.GetRolesForUser();
+                        if (roles[0] == "Admin")
+                        {
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        }
+                        else if (roles[0] == "Customer")
+                        {
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        }
+                        else if (roles[0] == "Instructor")
+                        {
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        }
+                    }*@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Instructors", "Instructors", "Home")</li>
