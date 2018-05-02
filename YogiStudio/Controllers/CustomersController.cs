@@ -148,9 +148,6 @@ namespace YogiStudio.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult Home()
-        {
-            return View();
-        }
+    
     }
 }
