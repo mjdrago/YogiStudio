@@ -24,15 +24,15 @@ namespace YogiStudio.Controllers
 
                 if (s[0].ToString() == "Admin")
                 {
-                    return View();
+                    return RedirectToAction("Index","Administrator");
                 }
                 else if (s[0].ToString() == "Customer")
                 {
-                    return View();
+                    return RedirectToAction("Home", "Customer");
                 }
                 else if (s[0].ToString() == "Instructor")
                 {
-                    return View();
+                    return RedirectToAction("Home", "Instructor");
                 }
             }
             return View();
