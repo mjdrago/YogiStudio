@@ -324,7 +324,7 @@
     <Content Include="Views\Instructor\MyPay.cshtml" />
     <Content Include="Views\Instructor\Calendar.cshtml" />
     <Content Include="Views\Instructor\InstructorBulletin.cshtml" />
-    <Content Include="Views\Administrator\CRUDEmployees.cshtml" />
+    <Content Include="Views\Administrator\CRUDEmployee.cshtml" />
     <Content Include="Views\Administrator\PayEmployees.cshtml" />
     <Content Include="Views\Administrator\Index.cshtml" />
     <Content Include="Views\Administrator\CRUDCalendar.cshtml" />
