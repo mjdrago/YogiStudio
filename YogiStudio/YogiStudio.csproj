@@ -77,6 +77,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -86,6 +87,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -197,6 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdministratorController.cs" />
+    <Compile Include="Controllers\BulletinController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
@@ -230,8 +233,17 @@
     <Compile Include="Migrations\201805012331319_CreatePaymentAndPackageTables.Designer.cs">
       <DependentUpon>201805012331319_CreatePaymentAndPackageTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805022253351_BulletinCreated.cs" />
+    <Compile Include="Migrations\201805022253351_BulletinCreated.Designer.cs">
+      <DependentUpon>201805022253351_BulletinCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030059050_PropertyNameChanged.cs" />
+    <Compile Include="Migrations\201805030059050_PropertyNameChanged.Designer.cs">
+      <DependentUpon>201805030059050_PropertyNameChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Bulletin.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -325,6 +337,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Bulletin\" />
     <Folder Include="Views\Package\" />
     <Folder Include="Views\Payment\" />
   </ItemGroup>
@@ -354,6 +367,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805012331319_CreatePaymentAndPackageTables.resx">
       <DependentUpon>201805012331319_CreatePaymentAndPackageTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022253351_BulletinCreated.resx">
+      <DependentUpon>201805022253351_BulletinCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030059050_PropertyNameChanged.resx">
+      <DependentUpon>201805030059050_PropertyNameChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
