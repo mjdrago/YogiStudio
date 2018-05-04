@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201805030059050_PropertyNameChanged.Designer.cs">
       <DependentUpon>201805030059050_PropertyNameChanged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805040110188_IDPropertyAddedAsKey.cs" />
+    <Compile Include="Migrations\201805040110188_IDPropertyAddedAsKey.Designer.cs">
+      <DependentUpon>201805040110188_IDPropertyAddedAsKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bulletin.cs" />
@@ -341,10 +345,10 @@
     <Content Include="Views\Customers\PackagesAndPricing.cshtml" />
     <Content Include="Views\Customers\CourseCalendar.cshtml" />
     <Content Include="Views\Customers\Home.cshtml" />
+    <Content Include="Views\Instructor\Bulletin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Bulletin\" />
     <Folder Include="Views\Package\" />
     <Folder Include="Views\Payment\" />
   </ItemGroup>
@@ -380,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805030059050_PropertyNameChanged.resx">
       <DependentUpon>201805030059050_PropertyNameChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805040110188_IDPropertyAddedAsKey.resx">
+      <DependentUpon>201805040110188_IDPropertyAddedAsKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

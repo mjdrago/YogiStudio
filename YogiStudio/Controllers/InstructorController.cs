@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using YogiStudio.Models;
 
 namespace YogiStudio.Controllers
 {
     public class InstructorController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Instructor
-        public ActionResult Index()
+        public ActionResult Home()
         {
             return View();
         }
@@ -17,9 +19,10 @@ namespace YogiStudio.Controllers
         {
             return View();
         }
-        public ActionResult InstructorBulletin()
+        public ActionResult Bulletin()
         {
-            return View();
+            
+            return View(db.Bulletins.ToList());
         }
         public ActionResult MyPay()
         {
