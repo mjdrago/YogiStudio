@@ -9,7 +9,8 @@ namespace YogiStudio
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/moment.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -23,9 +24,14 @@ namespace YogiStudio
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            // Custom Calendar.
+            bundles.Add(new ScriptBundle("~/bundles/Script-calendar").Include(
+                                 "~/Scripts/script-custom-calendar.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-minty.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/bootstrap-minty.css"
+                      ));
         }
     }
 }
