@@ -9,6 +9,7 @@ namespace YogiStudio.Models
     public class Bulletin
     {
         [Key]
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Message { get; set; }
         public string Comment { get; set; }

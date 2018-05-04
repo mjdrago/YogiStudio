@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using YogiStudio.Models;
 
 namespace YogiStudio.Controllers
 {
     public class PackageController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Package
         public ActionResult Index()
         {
@@ -21,8 +23,11 @@ namespace YogiStudio.Controllers
         }
 
         // GET: Package/Create
-        public ActionResult Create()
+        public ActionResult Create(Package package)
         {
+        
+            
+            
             return View();
         }
 

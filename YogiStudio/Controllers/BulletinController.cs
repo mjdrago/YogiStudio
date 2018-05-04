@@ -11,10 +11,6 @@ namespace YogiStudio.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Bulletin
-        private string message;
-        private string name;
-        private DateTime dateTime;
-        private string comment;
         public ActionResult Index()
         {
             return View();
@@ -25,34 +21,80 @@ namespace YogiStudio.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult ReceiveMessage(Bulletin model)
+        {
+            try
+            {
+                ApplicationDbContext db = new ApplicationDbContext();
+
+                Bulletin newPost = new Bulletin();
+                newPost.Message = model.Message;
+                newPost.Name = model.Name;
+                newPost.DateTime = DateTime.Now;
+
+                db.Bulletins.Add(newPost);
+
+                db.SaveChanges();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+          
+            return RedirectToAction("Bulletin","Instructor");
+        }
 
         // GET: Bulletin/Create
         [HttpPost]
         public ActionResult PostMessage(Bulletin model)
-        {           
-            model.Name = name;
-            model.Message = message;
-            model.DateTime = dateTime;
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
 
-            return View("InstructorBulletin");
+            Bulletin newPost = new Bulletin();
+            newPost.Message = model.Message;
+            newPost.Name = model.Name;
+            newPost.DateTime = model.DateTime;
+
+            db.Bulletins.Add(newPost);
+
+            db.SaveChanges();
+
+            return View();
         }
         [HttpGet]
-        public ActionResult ReceiveMessage(Bulletin model)
+        public ActionResult ReceiveComment(Bulletin model)
         {
-            model.Name = name;
-            model.Message = message;
-            model.DateTime = dateTime;
+            ApplicationDbContext db = new ApplicationDbContext();
 
-            return View("InstructorBulletin");
+            Bulletin newComment = new Bulletin();
+
+            newComment.Comment = model.Comment;
+            newComment.Name = model.Name;
+            newComment.DateTime = model.DateTime;
+
+            db.Bulletins.Add(newComment);
+
+            db.SaveChanges();
+
+            return View();
         }
-        public ActionResult CreateComment(Bulletin model)
+        [HttpPost]
+        public ActionResult PostComment(Bulletin model)
         {
-            model.Name = name;
-            model.Message = message;
-            model.DateTime = dateTime;
-            model.Comment = comment;
+            ApplicationDbContext db = new ApplicationDbContext();
 
-            return View("InstructorBulletin");
+            Bulletin newComment = new Bulletin();
+
+            newComment.Comment = model.Comment;
+            newComment.Name = model.Name;
+            newComment.DateTime = model.DateTime;
+
+            db.Bulletins.Add(newComment);
+
+            db.SaveChanges();
+
+            return View();
         }
 
         // POST: Bulletin/Create
