@@ -28,7 +28,7 @@ namespace YogiStudio.Controllers
                 }
                 else if (s[0].ToString() == "Customer")
                 {
-                    return RedirectToAction("Home", "Customer");
+                    return RedirectToAction("Home", "Customers");
                 }
                 else if (s[0].ToString() == "Instructor")
                 {

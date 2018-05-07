@@ -17,7 +17,7 @@ namespace YogiStudio.Controllers
         // GET: Customers
         public ActionResult Home()
         {
-            return View(db.Customers.ToList());
+            return View();
         }
         public ActionResult Index()
         {
