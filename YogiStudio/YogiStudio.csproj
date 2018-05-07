@@ -245,12 +245,18 @@
     <Compile Include="Migrations\201805040110188_IDPropertyAddedAsKey.Designer.cs">
       <DependentUpon>201805040110188_IDPropertyAddedAsKey.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805070635541_ClassAndSchedule.cs" />
+    <Compile Include="Migrations\201805070635541_ClassAndSchedule.Designer.cs">
+      <DependentUpon>201805070635541_ClassAndSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bulletin.cs" />
+    <Compile Include="Models\ClassDetail.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MasterSchedule.cs" />
     <Compile Include="Models\Package.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805040110188_IDPropertyAddedAsKey.resx">
       <DependentUpon>201805040110188_IDPropertyAddedAsKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805070635541_ClassAndSchedule.resx">
+      <DependentUpon>201805070635541_ClassAndSchedule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
