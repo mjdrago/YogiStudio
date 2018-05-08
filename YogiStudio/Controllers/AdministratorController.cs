@@ -22,6 +22,7 @@ namespace YogiStudio.Controllers
             var instructor = GetInstructors().ToList();
             //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
             ViewBag.Classes = new SelectList(db.ClassDetails.ToList(), "Id", "ClassName");
+            ViewBag.ClassDescription = new SelectList(db.ClassDetails.ToList(), "Id", "ClassDescription");
             ViewBag.Instructors = new SelectList(db.Customers.Where(x => instructor.Contains(x.ApplicationUserId)).ToList(), "Id", "Name");
             return View();
         }

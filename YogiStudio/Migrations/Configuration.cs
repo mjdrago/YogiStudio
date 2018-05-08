@@ -51,24 +51,36 @@ namespace YogiStudio.Migrations
                 context.SaveChanges();
             }
 
-            if (!context.ClassDetails.Any(t => t.ClassName == "Beginner Yoga"))
+            if (!context.ClassDetails.Any(t => t.ClassName == "Deep Stretch"))
             {
-                var newClass = new ClassDetail { ClassName = "Beginner Yoga", ClassDescription = "Basic class." };
+                var newClass = new ClassDetail { ClassName = "Deep Stretch", ClassDescription = "Beginner+ Warms muscles, releases tension, helps flexibility and promotes active recovery." };
                 context.ClassDetails.AddOrUpdate(newClass);
                 context.SaveChanges();
             }
 
-            if (!context.ClassDetails.Any(t => t.ClassName == "Intermediate Yoga"))
+            if (!context.ClassDetails.Any(t => t.ClassName == "Hot Yoga"))
             {
-                var newClass = new ClassDetail { ClassName = "Intermdediate Yoga", ClassDescription = "Slightly harder class." };
+                var newClass = new ClassDetail { ClassName = "Hot Yoga", ClassDescription = "Beginner+ Builds strength, flexibility and promotes detoxification." };
                 context.ClassDetails.AddOrUpdate(newClass);
                 context.SaveChanges();
             }
 
 
-            if (!context.ClassDetails.Any(t => t.ClassName == "Advanced Yoga"))
+            if (!context.ClassDetails.Any(t => t.ClassName == "Vinyasa"))
             {
-                var newClass = new ClassDetail { ClassName = "Advanced Yoga", ClassDescription = "Killer class. User beware." };
+                var newClass = new ClassDetail { ClassName = "Vinyasa", ClassDescription = "Intermediate+ Develop strength, flexibility and stamina through balances and inversions that challenge your body." };
+                context.ClassDetails.AddOrUpdate(newClass);
+                context.SaveChanges();
+            }
+            if (!context.ClassDetails.Any(t => t.ClassName == "Power Yoga"))
+            {
+                var newClass = new ClassDetail { ClassName = "Power Yoga", ClassDescription = "Intermediate+ Heated, and strength building. Yoga like you've never experienced. Fast passed to challenge your mind and body." };
+                context.ClassDetails.AddOrUpdate(newClass);
+                context.SaveChanges();
+            }
+            if (!context.ClassDetails.Any(t => t.ClassName == "Bootcamp"))
+            {
+                var newClass = new ClassDetail { ClassName = "Bootcamp", ClassDescription = "Advanced+ Intense, cross training workout, combining Yoga with strength training by using bumbbells and body weight exercises." };
                 context.ClassDetails.AddOrUpdate(newClass);
                 context.SaveChanges();
             }
