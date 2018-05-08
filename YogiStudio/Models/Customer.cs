@@ -26,6 +26,13 @@ namespace YogiStudio.Models
         [Display(Name = "Birthday")]
         public DateTime DateOfBirth { get; set; }
 
+        public string Name
+        {
+            get
+            {
+                    return string.Format("{0} {1}", this.FirstName, this.LastName);
+            }
+        }
         public virtual ApplicationUser User { get; set; }
         public string ApplicationUserId { get; set; }
     }
