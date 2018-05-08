@@ -23,10 +23,10 @@
                     @Html.TextBox("Description", (SelectList)ViewBag.ClassDescription, " ")                       
                 </div>   
             @*<input type="text" id="eventTitle" placeholder="Title here"><br />*@
-            @*<div class="modal-body">
+            <div class="modal-body">
                 <label>Instructor</label>
                 @Html.DropDownList("Instructor", (SelectList)ViewBag.Instructors, " ")
-            </div>*@
+            </div>
             <label>Scheduled date</label>
             <input type="text" id="eventDate"><br />
             <label>Scheduled time</label>

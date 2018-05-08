@@ -4,8 +4,6 @@
     ViewBag.Title = "Bulletin";
 }
 
-
-
 <h2 id="mainHeader">Yogi Employee Chat</h2>
 <hr />
 <h3 id="quote">Try to be a rainbow in someone's cloud</h3>
@@ -17,35 +15,28 @@
 <div id="container" class="col-md-12">
     @using (Html.BeginForm("ReceiveMessage", "Bulletin", FormMethod.Post))
     {
-        <div class="col-md-8">
-            @Html.TextBoxFor(model => model.Message, new { @class = "form-control", @placeholder = "New Post" })
-            <hr />
+        <hr />
+        <div class="row">
+            @Html.TextBoxFor(model => model.Message, new { @class = "form-control", @placeholder = "New Post" })          
             <button type="submit" class="btn btn-default">Submit</button>
-        </div>
-            <hr />           
+        </div>                  
                 <div>              
                         @Html.ValueFor(model => model.Message)                                
                 </div>          
-            <div class="col-md-8">
+            @*<div class="col-md-8">
                 @Html.TextBoxFor(model => model.Comment, new { @class = "form-control", @placeholder = "Add Comment" })
                 <hr />
                 <button type="submit" class="btn btn-default">Submit</button>
-            </div>
-
+            </div>*@
     }
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayTextFor(model => model.Message)
-            </th>
-    </table>
+    <div>
+        @{
+            Html.RenderAction("_PartialBulletin", "Instructor");
+        }
+    </div>
 
 </div>
-<div>
-    @{
-        Html.RenderAction("_PartialBulletin", "Instructor");
-    }
-</div>
+
 
 @*@section scripts {
     <script src="~/Scripts/moment.js"></script>
@@ -53,7 +44,7 @@
     <script src="~/signalr/hubs"></script>
     <script src="~/Scripts/knockout-3.1.0.js"></script>
     <script src="~/Scripts/board.js"></script>*@
-    }
+    @*}*@
 
 @*<div class="row">
         <div class="col-md-12">

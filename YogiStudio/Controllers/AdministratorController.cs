@@ -30,7 +30,7 @@ namespace YogiStudio.Controllers
         private IQueryable<string> GetInstructors ()
         {
             return from user in db.Users
-                   where user.Roles.Any(r => r.RoleId == "d9c4b2a8-9608-434f-8fac-dc0573b036f3")
+                   where user.Roles.Any(r => r.RoleId == "db9f2d84-12dc-4b3c-a0c4-a23a12c9a01d")
                    select user.Id;
 
         }
