@@ -83,10 +83,26 @@ body {
   background-size:cover;
 }
 #popupEventForm{
-    background-color: rgba(111,66,193,.5);
+    background-color: rgba(111,66,193,.8);
     color:white;
     font-size:20px;
     text-align:left;
+    margin-bottom:300px;
+    margin-left:425px;
+    margin-right:425px;
+    margin-top:75px;
+    border-color:black;
+    border-style:solid;
+    border-width:3px;
+    
+}
+#modal-header{
+    color:white;
+    font-size:30px;
+    text-align:center;
+    border-bottom-style:solid;
+    border-color:black;
+    border-width:3px;
 }
 #quote{
     font-size:28px;

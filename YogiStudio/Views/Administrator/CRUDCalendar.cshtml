@@ -12,7 +12,7 @@
     <div id="calendar"></div>
 
 <div id="popupEventForm" class="modal hide" style="display: none;">
-    <div class="modal-header"><h3>Add new event</h3></div>
+    <div><h3 id="modal-header">Add New Class</h3></div>
     <div class="modal-body">
         <form id="EventForm" class="well">
             <input type="hidden" id="eventID">
@@ -23,10 +23,10 @@
                     @Html.TextBox("Description", (SelectList)ViewBag.ClassDescription, " ")                       
                 </div>   
             @*<input type="text" id="eventTitle" placeholder="Title here"><br />*@
-            <div class="modal-body">
+            @*<div class="modal-body">
                 <label>Instructor</label>
                 @Html.DropDownList("Instructor", (SelectList)ViewBag.Instructors, " ")
-            </div>
+            </div>*@
             <label>Scheduled date</label>
             <input type="text" id="eventDate"><br />
             <label>Scheduled time</label>
@@ -35,7 +35,7 @@
     </div>
     <div class="modal-footer">
         <button type="button" id="btnPopupCancel" data-dismiss="modal" class="btn">Cancel</button>
-        <button type="button" id="btnPopupSave" data-dismiss="modal" class="btn btn-primary">Save event</button>
+        <button type="button" id="btnPopupSave" data-dismiss="modal" class="btn btn-primary">Add Class</button>
     </div>
 </div>
 </div>
