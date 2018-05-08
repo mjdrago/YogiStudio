@@ -364,6 +364,7 @@
     <Content Include="Views\MasterSchedules\Details.cshtml" />
     <Content Include="Views\MasterSchedules\Edit.cshtml" />
     <Content Include="Views\MasterSchedules\Index.cshtml" />
+    <Content Include="Views\Instructor\_PartialBulletin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

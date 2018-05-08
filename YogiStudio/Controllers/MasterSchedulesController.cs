@@ -50,13 +50,13 @@ namespace YogiStudio.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public bool Create(string classId,string instructorId, string NewEventDate, string NewEventTime, string NewEventDuration)
+        public bool Create(string ClassId,string InstructorId, string NewEventDate, string NewEventTime, string NewEventDuration)
         {
             try
             {
                 MasterSchedule newEvent = new MasterSchedule();
-                newEvent.ClassDetailId = Int32.Parse(classId);
-                newEvent.CustomerId = Int32.Parse(instructorId);
+                newEvent.ClassDetailId = Int32.Parse(ClassId);
+                newEvent.CustomerId = Int32.Parse(InstructorId);
                 newEvent.StartTime = DateTime.ParseExact(NewEventDate + " " + NewEventTime, "MM/DD/YYYY HH:mm", CultureInfo.InvariantCulture);
                 newEvent.AppointmentLenghtInMinutes = Int32.Parse(NewEventDuration);
                 db.MasterSchedules.Add(newEvent);

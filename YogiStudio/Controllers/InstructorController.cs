@@ -26,8 +26,12 @@ namespace YogiStudio.Controllers
         }
         public ActionResult Bulletin()
         {
-            
-            return View(/*db.Bulletins.ToList()*/);
+            return View();
+        }
+        [ChildActionOnly]
+        public ActionResult _PartialBulletin()
+        {
+            return PartialView(db.Bulletins.ToList());
         }
         public ActionResult MyPay()
         {
