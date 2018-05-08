@@ -339,7 +339,6 @@
     <Content Include="Views\Instructor\Home.cshtml" />
     <Content Include="Views\Instructor\MyPay.cshtml" />
     <Content Include="Views\Instructor\Calendar.cshtml" />
-    <Content Include="Views\Instructor\InstructorBulletin.cshtml" />
     <Content Include="Views\Administrator\CRUDEmployee.cshtml" />
     <Content Include="Views\Administrator\PayEmployees.cshtml" />
     <Content Include="Views\Administrator\Index.cshtml" />
