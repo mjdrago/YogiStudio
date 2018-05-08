@@ -11,6 +11,6 @@
         selectable: true,
         slotMinutes: 30,
         minTime: "07:00:00",
-        minTime: "20:00:00"
+        maxTime: "20:00:00"
     });
 });
