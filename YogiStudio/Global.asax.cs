@@ -16,6 +16,7 @@ namespace YogiStudio
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //Stripe.StripeConfiguration.SetApiKey(System.Configuration.ConfigurationManager.AppSettings[""]);
         }
     }
 }

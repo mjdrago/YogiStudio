@@ -7,5 +7,6 @@ namespace YogiStudio
 {
     public class Stripe
     {
+        public static object StripeConfiguration { get; internal set; }
     }
 }
