@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Owin;
 using YogiStudio.Models;
+using Stripe;
 
 [assembly: OwinStartupAttribute(typeof(YogiStudio.Startup))]
 namespace YogiStudio
@@ -13,8 +14,10 @@ namespace YogiStudio
         {
             ConfigureAuth(app);
             CreateRolesAndDefaultAdmin();
+            //StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["sk_test_FmPxm0w0ndtTV5te2GJCEqPQ"]);
+            //services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
         }
-
+    
         private void CreateRolesAndDefaultAdmin()
         {
             ApplicationDbContext db = new ApplicationDbContext();

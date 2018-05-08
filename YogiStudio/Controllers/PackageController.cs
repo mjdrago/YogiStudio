@@ -1,17 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using YogiStudio.Models;
+using Stripe;
 
 namespace YogiStudio.Controllers
 {
     public class PackageController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        
         // GET: Package
         public ActionResult Index()
+        {
+            var stripePublishKey = ConfigurationManager.AppSettings["pk_test_ZAnbP0INntVBj9Q84CNzSpRQ"];
+            ViewBag.StripePublishKey = stripePublishKey;
+            return View();
+        }
+        //Return Charge from Stripe
+        public ActionResult Charge(string stripeEmail, string stripeToken)
+        {
+            var customers = new StripeCustomerService();
+            var charges = new StripeChargeService();
+
+            var customer = customers.Create(new StripeCustomerCreateOptions
+            {
+                Email = stripeEmail,
+                SourceToken = stripeToken
+            });
+
+            var charge = charges.Create(new StripeChargeCreateOptions
+            {
+                Amount = 15,
+                Description = "Sample Charge",
+                Currency = "usd",
+                CustomerId = customer.Id
+            });
+
+            return View();
+            }
+
+        public ActionResult Error()
         {
             return View();
         }

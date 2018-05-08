@@ -1,0 +1,50 @@
+﻿@model YogiStudio.Models.MasterSchedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MasterSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassId.ClassName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassId.ClassName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InstructorId.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InstructorId.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentLenghtInMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentLenghtInMinutes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
