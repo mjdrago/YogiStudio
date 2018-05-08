@@ -1,4 +1,5 @@
 ﻿@model YogiStudio.Models.Bulletin
+
 @{
     ViewBag.Title = "Bulletin";
 }
@@ -23,7 +24,7 @@
         </div>
             <hr />           
                 <div>              
-                        @Html.ValueFor(model=>model.Message)                                
+                        @Html.ValueFor(model => model.Message)                                
                 </div>          
             <div class="col-md-8">
                 @Html.TextBoxFor(model => model.Comment, new { @class = "form-control", @placeholder = "Add Comment" })
@@ -39,6 +40,11 @@
             </th>
     </table>
 
+</div>
+<div>
+    @{
+        Html.RenderAction("_PartialBulletin", "Instructor");
+    }
 </div>
 
 @*@section scripts {
