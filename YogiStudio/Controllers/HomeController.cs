@@ -9,8 +9,10 @@ using YogiStudio.Models;
 
 namespace YogiStudio.Controllers
 {
-    public class HomeController : Controller
+   
+    public class HomeController : Controller      
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
 
@@ -57,6 +59,11 @@ namespace YogiStudio.Controllers
         }
         public ActionResult CourseCalendar()
         {
+            //var instructor = GetInstructors().ToList();
+            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
+            ViewBag.Classes = new SelectList(db.ClassDetails.ToList(), "Id", "ClassName");
+            ViewBag.ClassDescription = new SelectList(db.ClassDetails.ToList(), "Id", "ClassDescription");
+            //ViewBag.Instructors = new SelectList(db.Customers.Where(x => instructor.Contains(x.ApplicationUserId)).ToList(), "Id", "Name");
             return View();
         }
         public ActionResult PackagesAndPricing()
