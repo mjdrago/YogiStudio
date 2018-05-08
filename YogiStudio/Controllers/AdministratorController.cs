@@ -1,13 +1,17 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using YogiStudio.Models;
 
 namespace YogiStudio.Controllers
 {
     public class AdministratorController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Administrator
         public ActionResult Index()
         {
@@ -15,7 +19,19 @@ namespace YogiStudio.Controllers
         }
         public ActionResult CRUDCalendar()
         {
+            var instructor = GetInstructors().ToList();
+            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
+            ViewBag.Classes = new SelectList(db.ClassDetails.ToList(), "Id", "ClassName");
+            ViewBag.Instructors = new SelectList(db.Customers.Where(x => instructor.Contains(x.ApplicationUserId)).ToList(), "Id", "Name");
             return View();
+        }
+
+        private IQueryable<string> GetInstructors ()
+        {
+            return from user in db.Users
+                   where user.Roles.Any(r => r.RoleId == "d9c4b2a8-9608-434f-8fac-dc0573b036f3")
+                   select user.Id;
+
         }
         public ActionResult CRUDEmployee()
         {
