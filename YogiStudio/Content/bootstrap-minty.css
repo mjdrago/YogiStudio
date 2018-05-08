@@ -104,6 +104,7 @@ body {
     border-color:black;
     border-width:3px;
 }
+
 #quote{
     font-size:28px;
     font-family:'AR BERKLEY';
@@ -111,10 +112,8 @@ body {
 .homeButton{
     text-align:center;
 }
-#navbarLinks{
-    text-align:center;
-    font-weight:bold;
-    font-size:18px;
+#navbarLinks{  
+    font-size:20px;
 }
 #jumbotron{
     font-size:56px;

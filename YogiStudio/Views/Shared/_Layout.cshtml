@@ -19,14 +19,13 @@
                 </button>
                 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Instructors", "Instructors", "Home")</li>
-                    <li>@Html.ActionLink("Packages", "PackagesAndPricing", "Home")</li>
-                    <li>@Html.ActionLink("Calendar", "CourseCalendar", "Home")</li>
-                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+            <div id="navbarLinks" class="navbar-collapse collapse">
+                <ul class="d-flex justify-content-center">
+                    <li class="p-4">@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="p-4">@Html.ActionLink("Instructors", "Instructors", "Home")</li>
+                    <li class="p-4">@Html.ActionLink("Packages", "PackagesAndPricing", "Home")</li>
+                    <li class="p-4">@Html.ActionLink("Calendar", "CourseCalendar", "Home")</li>
+                    <li class="p-4">@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

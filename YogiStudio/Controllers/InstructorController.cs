@@ -22,7 +22,7 @@ namespace YogiStudio.Controllers
         public ActionResult Bulletin()
         {
             
-            return View(db.Bulletins.ToList());
+            return View(/*db.Bulletins.ToList()*/);
         }
         public ActionResult MyPay()
         {
