@@ -88,17 +88,8 @@ body {
     font-size:20px;
     text-align:left;
     margin:15% auto;
-    /*position:absolute;
-    padding:inherit*/;
     width:50%;
     height:50%;
-    resize:both;
-    overflow:auto;
-    
-    /*margin-bottom:300px;
-    margin-left:425px;
-    margin-right:425px;
-    margin-top:75px;*/
     border-color:black;
     border-style:solid;
     border-width:3px;
@@ -141,9 +132,7 @@ body {
     color: #888;
 
 }
-#paragraph{
 
-}
 #container{
     color:black;
     font-size:18px;
@@ -153,30 +142,6 @@ body {
     border-width:6px;
     border-color:rgba(52,58,64,.5);
 }
-#homePage {
-}
-#contactUs{
-
-}
-#instructors{
-
-}
-#register{
-
-}
-#login{
-
-}
-#aboutUs{
-
-}
-#calendar{
-
-}
-#viewPay{
-
-}
-
 
 [tabindex="-1"]:focus {
   outline: 0 !important;
