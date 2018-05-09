@@ -46,7 +46,9 @@
         $.ajax({
             type: 'POST',
             url: "/MasterSchedules/Create",
-            data: dataRow,
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify(dataRow),
             success: function (response) {
                 if (response == 'True') {
                     //$('#calendar').fullCalendar('refetchEvents');
