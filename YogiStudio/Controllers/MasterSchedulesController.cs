@@ -37,19 +37,19 @@ namespace YogiStudio.Controllers
             return View(masterSchedule);
         }
 
-        // GET: MasterSchedules/Create
-        public ActionResult Create()
-        {
-            ViewBag.ClassDetailId = new SelectList(db.ClassDetails, "Id", "ClassName");
-            ViewBag.CustomerId = new SelectList(db.Customers, "Id", "FirstName");
-            return View();
-        }
+        //// GET: MasterSchedules/Create
+        //public ActionResult Create()
+        //{
+        //    ViewBag.ClassDetailId = new SelectList(db.ClassDetails, "Id", "ClassName");
+        //    ViewBag.CustomerId = new SelectList(db.Customers, "Id", "FirstName");
+        //    return View();
+        //}
 
         // POST: MasterSchedules/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
         public bool Create(string ClassId,string InstructorId, string NewEventDate, string NewEventTime, string NewEventDuration)
         {
             try
@@ -57,7 +57,7 @@ namespace YogiStudio.Controllers
                 MasterSchedule newEvent = new MasterSchedule();
                 newEvent.ClassDetailId = Int32.Parse(ClassId);
                 newEvent.CustomerId = Int32.Parse(InstructorId);
-                newEvent.StartTime = DateTime.ParseExact(NewEventDate + " " + NewEventTime, "MM/DD/YYYY HH:mm", CultureInfo.InvariantCulture);
+                newEvent.StartTime = DateTime.Parse(NewEventDate + " " + NewEventTime);
                 newEvent.AppointmentLenghtInMinutes = Int32.Parse(NewEventDuration);
                 db.MasterSchedules.Add(newEvent);
                 db.SaveChanges();

@@ -29,8 +29,10 @@ namespace YogiStudio.Controllers
 
         private IQueryable<string> GetInstructors ()
         {
+            var instructorRole = db.Roles.Where(h => h.Name.ToString() == "Instructor").FirstOrDefault();
+            var instructorID = instructorRole.Id.ToString();
             return from user in db.Users
-                   where user.Roles.Any(r => r.RoleId == "db9f2d84-12dc-4b3c-a0c4-a23a12c9a01d")
+                   where user.Roles.Any(r => r.RoleId.ToString() == instructorID)
                    select user.Id;
 
         }
